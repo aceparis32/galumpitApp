@@ -7,6 +7,9 @@ import{
     Header,
 } from 'react-native-elements';
 
+//import Beranda
+import Beranda from './AdminMenu'
+
 // create a component
 class HargaBarang extends Component {
     static navigationOptions = {
@@ -26,7 +29,7 @@ class HargaBarang extends Component {
             <Header
                 leftComponent={{ icon: 'menu', color: '#fff', onPress: () => this.props.navigation.navigate('DrawerOpen')}}
                 centerComponent={{ text: 'WELCOME ADMIN', style: { color: '#fff' } }}
-                rightComponent={{icon: 'home', color: '#fff'}}
+                rightComponent={{icon: 'home', color: '#fff', onPress: () => this.props.navigation.navigate('Beranda')}}
             />
             <Text>Harga Barang Screen</Text>
         </View>

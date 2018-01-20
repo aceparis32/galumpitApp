@@ -1,23 +1,21 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Button, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import MaterialIcons from  'react-native-vector-icons/MaterialIcons';
 
+//import header
 import {
-  Header,
+    Header,
 } from 'react-native-elements';
 
-//import beranda
-import Beranda from './AdminMenu'
-
 // create a component
-class StokBarang extends Component {
+class SalesMenu extends Component {
     static navigationOptions = {
         tabBarLabel: 'Stok Barang',
         drawerIcon: ({tintColor}) => {
             return(
                 <MaterialIcons
-                name="shop"
+                name="home"
                 size={24}
                 style={{color: tintColor}}
                 ></MaterialIcons>
@@ -28,14 +26,13 @@ class StokBarang extends Component {
         return <View>
             <Header
                 leftComponent={{ icon: 'menu', color: '#fff', onPress: () => this.props.navigation.navigate('DrawerOpen')}}
-                centerComponent={{ text: 'WELCOME ADMIN', style: { color: '#fff' } }}
-                rightComponent={{icon: 'home', color: '#fff', onPress: () => this.props.navigation.navigate('Beranda')}}
+                centerComponent={{ text: 'WELCOME SALES', style: { color: '#fff' } }}
             />
-            <Text>Stok Barang Screen</Text>
+            <Text>Dashboard Sales Screen</Text>
         </View>
                 
     }
 }
 
 //make this component available to the app
-export default StokBarang;
+export default SalesMenu;

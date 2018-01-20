@@ -1,37 +1,41 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Button } from 'react-native';
 
 //import react-native-elements
 import {
   Header,
 } from 'react-native-elements';
 
-// create a component
-class Sales extends Component {
-    render() {
-        return (
-            <View>
-                <Header
-                    leftComponent={{ icon: 'menu', color: '#fff'}}
-                    centerComponent={{ text: 'WELCOME SALES', style: { color: '#fff' } }}
-                    rightComponent={{icon: 'home', color: '#fff'}}
-                />
-                <Text>Sales Page</Text>
-            </View>
-        );
-    }
-}
+//import react-navigation
+import {
+    DrawerNavigator,
+} from 'react-navigation';
 
-// define your styles
-// const styles = StyleSheet.create({
-//     container: {
-//         flex: 1,
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         backgroundColor: '#2c3e50',
-//     },
-// });
+import SalesMenu from './SalesMenu'
+import DataBarang from './DataBarangSales'
+import NotaSales from './NotaSales'
+
+const Sales = DrawerNavigator(
+    {
+        Beranda: {
+            path: '/',
+            screen: SalesMenu,
+        },
+        Data_Barang: {
+            path: '/',
+            screen: DataBarang,
+        },
+        Nota: {
+            path: '/',
+            screen: NotaSales,
+        }
+    },
+    {
+        initialRouteName: 'Beranda',
+        drawerPosition: 'left',
+    }
+)
 
 //make this component available to the app
 export default Sales;

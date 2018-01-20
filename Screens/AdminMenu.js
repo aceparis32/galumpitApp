@@ -29,7 +29,6 @@ class AdminMenu extends Component {
             <Header
                 leftComponent={{ icon: 'menu', color: '#fff', onPress: () => this.props.navigation.navigate('DrawerOpen')}}
                 centerComponent={{ text: 'WELCOME ADMIN', style: { color: '#fff' } }}
-                rightComponent={{icon: 'home', color: '#fff'}}
             />
             <Text>Dashboard Screen</Text>
         </View>

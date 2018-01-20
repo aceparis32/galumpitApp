@@ -18,23 +18,6 @@ import StokBarang from './StokBarang'
 import HargaBarang from './HargaBarang'
 import AdminMenu from './AdminMenu'
 
-// create a component
-// class Home extends Component {
-//     render() {
-//         return (
-//             <View>
-//                 <Header
-//                     leftComponent={{ icon: 'menu', color: '#fff', }}
-//                     centerComponent={{ text: 'WELCOME ADMIN', style: { color: '#fff' } }}
-//                     rightComponent={{icon: 'home', color: '#fff'}}
-//                 />
-//                 <Text>Home Screen</Text>
-//             </View>
-//         );
-//     }
-
-// }
-
 const Admin = DrawerNavigator(
     {
         Beranda: {
@@ -55,16 +38,6 @@ const Admin = DrawerNavigator(
         drawerPosition: 'left',
     }
 )
-
-// // define your styles
-// const styles = StyleSheet.create({
-//     container: {
-//         flex: 1,
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         backgroundColor: '#2c3e50',
-//     },
-// });
 
 //make this component available to the app
 export default Admin;
